@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.cardFhoto {
+  width: 200px;
+  height: 200px;
+}
+
+.cardHeroes {
+  width: 250px;
+}
+
+.cards {
+  display: flex;
+}

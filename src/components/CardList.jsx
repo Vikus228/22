@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import PropTypes from 'prop-types';
 
 function CardList({ heroes }) {
     return(
@@ -21,6 +22,21 @@ function CardList({ heroes }) {
                 })}
         </React.Fragment>
     );
+};
+
+CardList.propTypes = {
+    cards: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            universe: PropTypes.string.isRequired,
+            alterego: PropTypes.string.isRequired,
+            occupation: PropTypes.string.isRequired,
+            friends: PropTypes.string.isRequired,
+            superpowers: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
+            info: PropTypes.string.isRequired,
+        })
+    ).isRequired,
 };
 
 export default CardList;
